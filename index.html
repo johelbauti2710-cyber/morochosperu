@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Morochos | Sazón Peruana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #6fd3e7, #9ae6f5);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header img {
+            max-width: 160px;
+        }
+
+        header h1 {
+            margin: 10px 0 0;
+            color: #b52b7a;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #b52b7a;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        section p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* PLATOS */
+        .platos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .plato {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .plato:hover {
+            transform: translateY(-5px);
+        }
+
+        .plato h3 {
+            color: #b52b7a;
+            margin-bottom: 10px;
+        }
+
+        .plato p {
+            font-size: 16px;
+        }
+
+        /* CTA */
+        .cta {
+            background: #b52b7a;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cta h2 {
+            color: #fff;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #25D366;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* BOTÓN WHATSAPP FLOTANTE */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 18px;
+            border-radius: 50%;
+            font-size: 26px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Morochos Sazón Peruana">
+    <h1>Morochos</h1>
+    <p>Sazón Peruana</p>
+</header>
+
+<section>
+    <h2>Sobre Nosotros</h2>
+    <p>
+        En <strong>Morochos</strong> preparamos platos con auténtica sazón peruana,
+        ideales para reuniones, eventos y celebraciones.
+        Trabajamos con insumos de calidad y una receta que marca la diferencia.
+    </p>
+</section>
+
+<section>
+    <h2>Nuestros Platos</h2>
+
+    <div class="platos">
+        <div class="plato">
+            <h3>🍗 Pollada Clásica</h3>
+            <p>Pollo dorado, jugoso y con el sabor tradicional que encanta a todos.</p>
+        </div>
+
+        <div class="plato">
+            <h3>🍗 Pollada Andina</h3>
+            <p>Un toque especial de especias andinas con nuestra sazón única.</p>
+        </div>
+
+        <div class="plato">
+            <h3>🥩 Chuleteada</h3>
+            <p>Chuleta bien servida, ideal para compartir en eventos.</p>
+        </div>
+
+        <div class="plato">
+            <h3>🍚 Acompañamientos</h3>
+            <p>Arroz y guarniciones que complementan perfectamente cada plato.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Haz tu pedido ahora</h2>
+    <p>Consulta disponibilidad, precios y pedidos por WhatsApp</p>
+    <a href="https://wa.me/51999999999" target="_blank">📲 Escribir por WhatsApp</a>
+</section>
+
+<footer>
+    <p>© 2026 Morochos - Sazón Peruana</p>
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/51999999999" target="_blank">💬</a>
+
+</body>
+</html>
