@@ -9,20 +9,20 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
+      background: #f4f4f4;
       color: #333;
     }
 
     header {
-      background: #b30059;
+      background: linear-gradient(135deg, #b30059, #ff4d88);
       color: white;
-      padding: 25px 20px;
+      padding: 30px 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
 
     header p {
@@ -43,32 +43,34 @@
     }
 
     .plato {
-      background: #ffffff;
+      background: white;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      transition: transform 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .plato:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.18);
     }
 
     .plato img {
       width: 100%;
-      height: 360px;
+      height: 380px;
       object-fit: cover;
       display: block;
     }
 
     .plato .info {
-      padding: 18px;
+      padding: 20px;
       text-align: center;
     }
 
     .plato h3 {
       margin: 0 0 10px;
       color: #b30059;
+      font-size: 1.2rem;
     }
 
     .plato p {
@@ -79,12 +81,13 @@
     .btn-wsp {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 18px;
+      padding: 12px 22px;
       background: #25D366;
       color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
+      font-size: 0.9rem;
     }
 
     .btn-wsp:hover {
@@ -105,41 +108,41 @@
 
 <header>
   <h1>Nuestros Platos</h1>
-  <p>Sazón peruano, bien servido y listo para tu evento 🍗🔥</p>
+  <p>Tradición, sabor y buena sazón peruana 🇵🇪🍗</p>
 </header>
 
 <section class="contenedor">
   <div class="platos-grid">
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CLASICA.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/CLASICA.jpeg" alt="Pollada Clásica">
       <div class="info">
         <h3>Pollada Clásica</h3>
-        <p>1/4 de pollo jugoso, papa doradita, ensalada fresca y cremita de rocoto.</p>
+        <p>1/4 de pollo jugoso, papa doradita, ensalada fresca y cremas.</p>
         <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
       </div>
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/ANDINA.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/ANDINA.jpeg" alt="Pollada Andina">
       <div class="info">
         <h3>Pollada Andina</h3>
-        <p>Estilo tradicional con papa sancochada con cáscara, bien servida.</p>
+        <p>Estilo tradicional con papa sancochada con cáscara.</p>
         <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
       </div>
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHANCHO%20A%20LA%20CAJA%20CHINA.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/CHANCHO%20A%20LA%20CAJA%20CHINA.jpeg" alt="Chancho a la Caja China">
       <div class="info">
         <h3>Chancho a la Caja China</h3>
-        <p>Crujiente por fuera, jugoso por dentro, ideal para eventos.</p>
+        <p>Crujiente por fuera y jugoso por dentro, ideal para eventos.</p>
         <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
       </div>
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHANCHO%20AL%20CILINDRO.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/CHANCHO%20AL%20CILINDRO.jpeg" alt="Chancho al Cilindro">
       <div class="info">
         <h3>Chancho al Cilindro</h3>
         <p>Panceta doradita con acompañamientos tradicionales.</p>
@@ -148,7 +151,7 @@
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHULETA.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/CHULETA.jpeg" alt="Chuleta">
       <div class="info">
         <h3>Chuleta</h3>
         <p>Chuleta jugosa con papa, choclo y ensalada fresca.</p>
@@ -157,7 +160,7 @@
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/PACHAMANCA.jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/PACHAMANCA.jpeg" alt="Pachamanca">
       <div class="info">
         <h3>Pachamanca</h3>
         <p>Tradición peruana con carnes y acompañamientos andinos.</p>
@@ -166,10 +169,10 @@
     </div>
 
     <div class="plato">
-      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/WhatsApp%20Image%202025-09-03%20at%205.12.35%20PM%20(2).jpeg?raw=true">
+      <img src="https://raw.githubusercontent.com/johelbauti2710-cyber/morochosperu/main/WhatsApp%20Image%202025-09-03%20at%205.12.35%20PM%20(2).jpeg" alt="Chicha Morada">
       <div class="info">
         <h3>Chicha Morada</h3>
-        <p>100% natural, ideal para acompañar tus platos.</p>
+        <p>Refresco 100% natural para acompañar tus pedidos.</p>
         <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
       </div>
     </div>
@@ -178,7 +181,7 @@
 </section>
 
 <footer>
-  © Morochos Perú 🇵🇪 – Sazón peruano con cariño
+  © Morochos Perú 🇵🇪 | Sazón peruana con cariño
 </footer>
 
 </body>
