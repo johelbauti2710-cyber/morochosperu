@@ -1,291 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Nuestros platos | Morochos Perú</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Nuestros Platos | Morochos Perú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f6f8;
-    color: #333;
-}
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #6fd3e7, #9ae6f5);
-    padding: 20px;
-}
-.header-content {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-header img {
-    max-width: 140px;
-}
-nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #b52b7a;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* TÍTULO */
-.page-title {
-    text-align: center;
-    padding: 50px 20px 10px;
-}
-.page-title h1 {
-    font-size: 36px;
-    color: #b52b7a;
-}
-
-/* GRID DE PLATOS */
-.grid-platos {
-    max-width: 1200px;
-    margin: 30px auto 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-}
-
-/* TARJETA DE PLATO */
-.card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-}
-.card img {
-    width: 100%;
-    height: 0;
-    padding-top: 140%; /* proporción vertical para foto */
-    object-fit: cover;
-}
-.card-content {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-.card-content h3 {
-    margin: 0 0 10px;
-    color: #b52b7a;
-}
-.card-content p {
-    flex-grow: 1;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-.card-content .price {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.card-content a.detalle {
-    display: inline-block;
-    margin-top: auto;
-    background: #25D366;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-}
-.card-content a.detalle:hover {
-    opacity: 0.9;
-}
-
-/* FOOTER */
-footer {
-    background: #222;
-    color: #ccc;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 18px;
-    border-radius: 50%;
-    font-size: 26px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-}
-
-@media(max-width: 768px) {
-    .page-title h1 {
-        font-size: 30px;
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #333;
     }
-}
-</style>
+
+    header {
+      background: #b30059;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .contenedor {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .platos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .plato {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .plato:hover {
+      transform: translateY(-6px);
+    }
+
+    .plato img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .plato .info {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .plato h3 {
+      margin: 0 0 10px;
+      color: #b30059;
+    }
+
+    .plato p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .btn-wsp {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .btn-wsp:hover {
+      background: #1ebe5b;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <div class="header-content">
-        <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/BackgroundEraser_20251217_222843159.png" alt="Morochos Perú">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="platos.html">Platos</a>
-            <a href="contacto.html">Contáctanos</a>
-            <a href="ubicacion.html">Ubícanos</a>
-        </nav>
-    </div>
+  <h1>Nuestros Platos</h1>
+  <p>Sazón peruano, bien servido y listo para tu evento 🍗🔥</p>
 </header>
 
-<section class="page-title">
-    <h1>Nuestros platos</h1>
-</section>
+<section class="contenedor">
+  <div class="platos-grid">
 
-<section class="grid-platos">
-
-    <!-- 1) Pollada Clásica -->
-    <div class="card">
-        <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CLASICA.jpeg" alt="Pollada Clásica">
-        <div class="card-content">
-            <h3>Pollada Clásica</h3>
-            <div class="price">S/ 10.50</div>
-            <p>
-                1/4 de pollo jugoso marinado; rodajas de papa Yungay doraditas; ensalada fresca de col en taper 6 oz; cremita de rocoto en bolsita sellada.
-                Servido en taper deli transparente de litro, listo para disfrutar.
-                Disponible desde 30 platos en adelante.
-            </p>
-            <a class="detalle" href="plato.html?plato=pollada-clasica">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CLASICA.jpeg?raw=true">
+      <div class="info">
+        <h3>Pollada Clásica</h3>
+        <p>1/4 de pollo jugoso, papa doradita, ensalada fresca y cremita de rocoto.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 2) Pollada Andina -->
-    <div class="card">
-        <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/ANDINA.jpeg" alt="Pollada Andina">
-        <div class="card-content">
-            <h3>Pollada Andina</h3>
-            <div class="price">S/ 9.50</div>
-            <p>
-                1/4 de pollo jugoso; papitas Yungay medianas sin pelar; ensalada fresca de col en taper 6 oz; cremita de rocoto.
-                Servido en taper deli transparente de litro.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=pollada-andina">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/ANDINA.jpeg?raw=true">
+      <div class="info">
+        <h3>Pollada Andina</h3>
+        <p>Estilo tradicional con papa sancochada con cáscara, bien servida.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 3) Chuleta -->
-    <div class="card">
-        <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHULETA.jpeg" alt="Chuleta">
-        <div class="card-content">
-            <h3>Chuleta</h3>
-            <div class="price">S/ 9.50</div>
-            <p>
-                250 g de chuleta de cerdo jugosa; rodajas de papa Yungay; ensalada fresca de col en taper 6 oz; cremita de rocoto; trozo de choclo.
-                Servido en taper deli de litro.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=chuleteada">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHANCHO%20A%20LA%20CAJA%20CHINA.jpeg?raw=true">
+      <div class="info">
+        <h3>Chancho a la Caja China</h3>
+        <p>Crujiente por fuera, jugoso por dentro, ideal para eventos.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 4) Chicha Morada -->
-    <div class="card">
-        <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/WhatsApp%20Image%202025-09-03%20at%205.12.35%20PM%20(2).jpeg?raw=true" alt="Chicha Morada">
-        <div class="card-content">
-            <h3>Chicha Morada</h3>
-            <div class="price">S/ 0.60</div>
-            <p>
-                Botella de 280 ml, 100% natural, sin conservantes.
-                Disponible a partir de 30 unidades.
-                Ideal para acompañar tus platillos.
-            </p>
-            <a class="detalle" href="plato.html?plato=chicha-morada">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHANCHO%20AL%20CILINDRO.jpeg?raw=true">
+      <div class="info">
+        <h3>Chancho al Cilindro</h3>
+        <p>Panceta doradita con acompañamientos tradicionales.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 5) Pollo al Cilindro -->
-    <div class="card">
-        <img src="imagenes/pollo-cilindro.jpg" alt="Pollo al Cilindro">
-        <div class="card-content">
-            <h3>Pollo al Cilindro</h3>
-            <div class="price">S/ 11.00</div>
-            <p>
-                1/4 de pollo grande; 4 a 5 papas medianas sancochadas; ensalada de col 6 oz; crema de rocoto.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=pollo-cilindro">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/CHULETA.jpeg?raw=true">
+      <div class="info">
+        <h3>Chuleta</h3>
+        <p>Chuleta jugosa con papa, choclo y ensalada fresca.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 6) Chancho al Cilindro -->
-    <div class="card">
-        <img src="imagenes/chancho-cilindro.jpg" alt="Chancho al Cilindro">
-        <div class="card-content">
-            <h3>Chancho al Cilindro</h3>
-            <div class="price">S/ 17.00</div>
-            <p>
-                250 g de panceta; chorizo; papa; camote; choclo; sarza de cebolla; crema de rocoto.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=chancho-cilindro">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/PACHAMANCA.jpeg?raw=true">
+      <div class="info">
+        <h3>Pachamanca</h3>
+        <p>Tradición peruana con carnes y acompañamientos andinos.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 7) Chancho a la Caja China -->
-    <div class="card">
-        <img src="imagenes/chancho-caja-china.jpg" alt="Chancho a la Caja China">
-        <div class="card-content">
-            <h3>Chancho a la Caja China</h3>
-            <div class="price">S/ 18.00</div>
-            <p>
-                250 g de cerdo; chorizo; camote; papa; choclo; sarza criolla; crema de rocoto en bolsita sellada.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=chancho-caja-china">Ver detalle</a>
-        </div>
+    <div class="plato">
+      <img src="https://github.com/johelbauti2710-cyber/morochosperu/blob/main/WhatsApp%20Image%202025-09-03%20at%205.12.35%20PM%20(2).jpeg?raw=true">
+      <div class="info">
+        <h3>Chicha Morada</h3>
+        <p>100% natural, ideal para acompañar tus platos.</p>
+        <a class="btn-wsp" href="https://wa.me/51982360630">Pedir por WhatsApp</a>
+      </div>
     </div>
 
-    <!-- 8) Pachamanca -->
-    <div class="card">
-        <img src="imagenes/pachamanca.jpg" alt="Pachamanca">
-        <div class="card-content">
-            <h3>Pachamanca</h3>
-            <div class="price">S/ 16.00</div>
-            <p>
-                1/8 de pollo; 200 g de cerdo; papa; camote; choclo; habas; cremita de rocoto.
-                Servido en taper deli de litro.
-                A partir de 30 platos.
-            </p>
-            <a class="detalle" href="plato.html?plato=pachamanca">Ver detalle</a>
-        </div>
-    </div>
-
+  </div>
 </section>
 
 <footer>
-    © 2026 Morochos Perú – Sazón Peruana
+  © Morochos Perú 🇵🇪 – Sazón peruano con cariño
 </footer>
-
-<a class="whatsapp" href="https://wa.me/51999999999" target="_blank">💬</a>
 
 </body>
 </html>
